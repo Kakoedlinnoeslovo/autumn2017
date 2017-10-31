@@ -8,6 +8,7 @@ class Track(models.Model):
     duration = models.IntegerField(verbose_name='Длительность')
     release_date = models.DateField(verbose_name='Дата выпуска')
     artists = models.ManyToManyField(to='Artist', verbose_name='Исполнители')
+    album = models.ForeignKey(to='Album', verbose_name='Альбом', null=True, blank=True)
     
     def __str__(self):
         return self.title

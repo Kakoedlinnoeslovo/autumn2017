@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}
+    Добавление трека
+{% endblock %}
+
+{% block content %}
+    <form action="{% url 'music:track_add' %}" method="POST"> 
+        {% csrf_token %}
+        {{form.as_table}}
+        <input type="submit"/>
+    </form>
+{% endblock %}

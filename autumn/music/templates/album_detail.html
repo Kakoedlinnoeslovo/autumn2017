@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Альбом {{ album.title }}
+{% endblock %}
+
+{% block content %}
+    {% for track in tracks %}
+        <div>
+            <span class="track_title">{{ track.title }}</span> - <span class="track_duration">{{ track.duration }}</span>
+        </div>
+    {% endfor %}
+{% endblock %}
